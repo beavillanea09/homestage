@@ -1,0 +1,1914 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Updated title to reflect the new target audience and approachable tone -->
+    <title>Bea Villanea | Your Virtual Partner for Home Stagers & Interior Designers</title>
+    <!-- Tailwind CSS CDN for utility-first styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN for scalable vector icons -->
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+    <!-- Google Fonts for custom typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* ENHANCED: Custom CSS variables for vibrant brand identity */
+        :root {
+            --primary-pink: #E91E63; /* Stronger, more vibrant pink */
+            --primary-pink-dark: #C2185B; /* Darker shade for hover states */
+            --primary-pink-light: #F8BBD9; /* Light pink for backgrounds */
+            --primary-pink-ultra-light: #FCE4EC; /* Ultra light pink */
+            --accent-gradient: linear-gradient(135deg, #E91E63, #FF6B9D); /* Dynamic gradient */
+            --accent-gradient-hover: linear-gradient(135deg, #C2185B, #E91E63); /* Hover gradient */
+            --neutral-dark: #413f3f; /* Rich dark gray */
+            --neutral-medium: #7e7b7b; /* Medium gray */
+            --neutral-light: #c4c2c2; /* Light gray */
+            --neutral-ultra-light: #F7FAFC; /* Background color */
+            --success-color: #4CAF50; /* Green for success states */
+            --shadow-soft: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --shadow-strong: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        /* ENHANCED: Typography system with better hierarchy */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--neutral-ultra-light);
+            color: var(--neutral-dark);
+            line-height: 1.6;
+            overflow-x: hidden; /* Prevent horizontal scrolling on mobile */
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--neutral-dark);
+            line-height: 1.2;
+        }
+        /* Optimized typography hierarchy - Adjusted font sizes for H1 and H2 */
+        h1 { font-size: clamp(2.8rem, 5vw, 4.5rem); font-weight: 900; line-height: 1.1; }
+        h2 { font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 800; }
+        /* ENHANCED: Modern button system with better visual impact */
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.25rem 3rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            background: var(--accent-gradient);
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 8px 32px rgba(233, 30, 99, 0.3);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: none;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transform: perspective(1px) translateZ(0);
+        }
+        .btn-primary:hover {
+            background: var(--accent-gradient-hover);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(233, 30, 99, 0.4);
+        }
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.6s;
+        }
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            background-color: white;
+            color: var(--neutral-medium);
+            border: 2px solid #E2E8F0;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .btn-secondary:hover {
+            border-color: var(--primary-pink);
+            color: var(--primary-pink);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(233, 30, 99, 0.2);
+        }
+        /* ENHANCED: Urgent CTA styling */
+        .btn-urgent {
+            position: relative;
+            animation: pulse-urgent 2s infinite;
+            background: linear-gradient(135deg, #FF6B9D, #E91E63, #C2185B);
+            background-size: 200% 200%;
+            animation: gradientShift 3s ease infinite, pulse-urgent 2s infinite;
+        }
+        @keyframes pulse-urgent {
+            0%, 100% {
+                box-shadow: 0 8px 32px rgba(233, 30, 99, 0.3);
+                opacity: 1; /* Ensure opacity is reset */
+                transform: scale(1); /* Re-added for pulsing effect */
+            }
+            50% {
+                box-shadow: 0 12px 40px rgba(233, 30, 99, 0.5);
+                opacity: 0.8; /* Subtle opacity change */
+                transform: scale(1.05); /* Re-added for pulsing effect */
+            }
+        }
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        /* ENHANCED: Card system with better visual hierarchy */
+        .card-enhanced {
+            background: white;
+            border-radius: 24px;
+            padding: 2rem; /* Adjusted from 2.5rem */
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid #F1F5F9;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .card-enhanced::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: var(--accent-gradient);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+        .card-enhanced:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+        }
+        .card-enhanced:hover::before {
+            transform: scaleX(1);
+        }
+        /* ENHANCED: Hero section with dramatic visual impact */
+        .hero-enhanced {
+            background: linear-gradient(135deg, var(--primary-pink-ultra-light) 0%, white 50%, #F0F9FF 100%);
+            position: relative;
+            overflow: hidden;
+            padding: 4rem 0; /* Adjusted from 6rem */
+        }
+        .hero-enhanced::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -15%;
+            width: 60%;
+            height: 180%;
+            background: radial-gradient(circle, var(--primary-pink-light), transparent 70%);
+            border-radius: 50%;
+            opacity: 0.15;
+            animation: heroFloat 8s ease-in-out infinite;
+        }
+        .hero-enhanced::after {
+            content: '';
+            position: absolute;
+            bottom: -40%;
+            left: -20%;
+            width: 80%;
+            height: 120%;
+            background: radial-gradient(circle, #E3F2FD, transparent 60%);
+            border-radius: 50%;
+            opacity: 0.1;
+            animation: heroFloat 10s ease-in-out infinite reverse;
+        }
+        @keyframes heroFloat {
+            0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+            33% { transform: translateY(-30px) rotate(2deg) scale(1.05); }
+            66% { transform: translateY(20px) rotate(-1deg) scale(0.98); }
+        }
+        /* ENHANCED: Value proposition highlighting */
+        .value-highlight {
+            background: linear-gradient(135deg, var(--primary-pink), var(--primary-pink-dark));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 900;
+            display: inline-block;
+            position: relative;
+        }
+        .value-highlight::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--accent-gradient);
+            border-radius: 2px;
+            opacity: 0.3;
+        }
+        /* ENHANCED: Social proof styling */
+        .social-proof-banner {
+            background: linear-gradient(135deg, #C2185B, #cf6891);
+            color: white;
+            padding: 0.75rem 0; /* Adjusted from 1rem */
+            text-align: center;
+            font-weight: 600;
+            box-shadow: 0 4px 20px rgba(76, 175, 80, 0.3);
+        }
+        .testimonial-card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem; /* Adjusted from 2rem */
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            border-left: 4px solid var(--primary-pink);
+            flex-shrink: 0; /* Important for carousel */
+            min-width: 80%; /* On small screens, nearly full width */
+            width: 80%; /* fallback */
+        }
+        /* Responsive card widths for infinite scroll */
+        @media (min-width: 768px) { /* md breakpoint */
+            .testimonial-card {
+                min-width: calc((100% / 2) - 0.75rem); /* Two cards per view with gap (gap-6 = 1.5rem = 24px, so 0.75rem on each side) */
+                width: calc((100% / 2) - 0.75rem);
+            }
+        }
+        @media (min-width: 1024px) { /* lg breakpoint */
+            .testimonial-card {
+                min-width: calc((100% / 3) - 1rem); /* Three cards per view with gap (gap-6 = 1.5rem, approx 1rem per side) */
+                width: calc((100% / 3) - 1rem);
+            }
+        }
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 15px; /* Adjusted from 20px */
+            font-size: 3rem; /* Adjusted from 4rem */
+            color: var(--primary-pink);
+            opacity: 0.3;
+            font-family: 'Playfair Display', serif;
+        }
+        /* ENHANCED: Results showcase styling */
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Default to 2 columns on small screens */
+            gap: 1rem; /* Adjusted from 2rem */
+            margin: 2rem 0; /* Adjusted from 3rem */
+            align-items: stretch; /* Ensures cards stretch to equal height */
+            justify-content: center; /* Center items in the grid */
+        }
+
+        @media (min-width: 768px) { /* md breakpoint */
+            .results-grid {
+                grid-template-columns: repeat(4, 1fr); /* 4 columns on larger screens */
+                gap: 1.5rem; /* Slightly more gap on larger screens */
+            }
+        }
+
+        .result-stat {
+            text-align: center;
+            padding: 1rem; /* Adjusted from 2rem */
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            display: flex; /* Added flexbox for internal centering */
+            flex-direction: column; /* Stack content vertically */
+            justify-content: center; /* Center content vertically */
+            align-items: center;    /* Center content horizontally */
+            height: 130px; /* Enforce uniform height */
+            /* Added for width uniformity within grid items */
+            min-width: 0; /* Allows the grid item to shrink as needed */
+            width: 100%; /* Ensures it takes the full width of its grid cell */
+        }
+        .result-stat:hover {
+            transform: translateY(-8px);
+        }
+        .result-number {
+            font-size: 2.5rem; /* Adjusted from 3rem */
+            font-weight: 900;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+            margin-bottom: 0.25rem; /* Adjusted from 0.5rem */
+        }
+        .result-label {
+            font-size: 0.8rem; /* Adjusted from 0.9rem */
+            font-weight: 600;
+            color: var(--neutral-medium);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        /* ENHANCED: Animation system */
+        .animate-fade-up {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .animate-fade-up:not(.in-view) {
+            opacity: 0;
+            transform: translateY(40px);
+        }
+        .animate-fade-up.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .animate-scale-in {
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .animate-scale-in:not(.in-view) {
+            opacity: 0;
+            transform: scale(0.8);
+        }
+        .animate-scale-in.in-view {
+            opacity: 1;
+            transform: scale(1);
+        }
+        /* ENHANCED: Section styling */
+        .section-enhanced {
+            padding: 4rem 0; /* Adjusted from 6rem */
+        }
+        .section-title {
+            font-size: clamp(2.2rem, 3.5vw, 3rem); /* Adjusted for smaller size */
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 1.25rem; /* Adjusted from 1.5rem */
+            background: linear-gradient(135deg, var(--neutral-dark), var(--primary-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .section-subtitle {
+            font-size: 1.1rem; /* Adjusted from 1.3rem */
+            color: var(--neutral-medium);
+            text-align: center;
+            max-width: 600px; /* Adjusted from 700px */
+            margin: 0 auto 3rem; /* Adjusted from 4rem */
+            line-height: 1.7;
+            font-weight: 500;
+        }
+        /* ENHANCED: Banner animation with urgency */
+        .scrolling-banner {
+            overflow: hidden;
+            background: var(--primary-pink);
+            color: white;
+            padding: 1rem 0; /* Adjusted from 1.25rem */
+            position: relative;
+            background: linear-gradient(135deg, var(--primary-pink), #FF6B9D);
+        }
+        .scrolling-banner::before,
+        .scrolling-banner::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 100px; /* Adjusted from 120px */
+            height: 100%;
+            z-index: 2;
+        }
+        .scrolling-banner::before {
+            left: 0;
+            background: linear-gradient(to right, var(--primary-pink), transparent);
+        }
+        .scrolling-banner::after {
+            right: 0;
+            background: linear-gradient(to left, var(--primary-pink), transparent);
+        }
+        .banner-content {
+            display: flex;
+            animation: scroll-left 10s linear infinite; /* Adjusted from 20s to 10s for faster speed */
+            font-weight: 800;
+            font-size: 1.2rem; /* Adjusted from 1.5rem */
+            letter-spacing: 0.1em;
+        }
+        .banner-text {
+            margin-right: 3rem; /* Adjusted from 4rem */
+            white-space: nowrap;
+        }
+        @keyframes scroll-left {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        /* ENHANCED: Urgency indicators */
+        .urgency-indicator {
+            background: linear-gradient(135deg, #FF4444, #FF6B6B);
+            color: white;
+            padding: 0.4rem 0.8rem; /* Adjusted from 0.5rem 1rem */
+            border-radius: 20px;
+            font-size: 0.8rem; /* Adjusted from 0.85rem */
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            animation: urgency-pulse 2s infinite;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        /* Re-added transform properties for visual pulse */
+        @keyframes urgency-pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.05); }
+        }
+        /* ENHANCED: Responsive improvements */
+        @media (max-width: 768px) {
+            .section-enhanced {
+                padding: 3rem 0; /* Adjusted from 4rem */
+            }
+
+            .hero-enhanced {
+                padding: 3rem 0; /* Adjusted from 4rem */
+            }
+
+            .btn-primary {
+                padding: 0.8rem 2rem; /* Adjusted from 1rem 2.5rem */
+                font-size: 0.9rem; /* Adjusted from 1rem */
+            }
+
+            .card-enhanced {
+                padding: 1.5rem; /* Adjusted from 2rem */
+            }
+        }
+        /* Specific mobile adjustments for header branding */
+        @media (max-width: 640px) { /* Small screens and below */
+            .mobile-tagline {
+                font-size: 0.625rem; /* text-xxs */
+                display: block; /* Force new line */
+                line-height: 1.2;
+                margin-left: 0 !important; /* Remove ml on small screens */
+            }
+            header .flex-shrink-0 a .text-2xl { /* Target the main name specifically */
+                font-size: 1.5rem; /* Adjusted for mobile view */
+            }
+        }
+
+        /* ENHANCED: Visual elements */
+        .accent-dot {
+            width: 8px; /* Adjusted from 10px */
+            height: 8px; /* Adjusted from 10px */
+            background: var(--primary-pink);
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 0.75rem; /* Adjusted from 0 1rem */
+            animation: dot-pulse 2s infinite;
+        }
+        @keyframes dot-pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.2); }
+        }
+        .divider-enhanced {
+            height: 1px; /* Adjusted from 2px */
+            background: linear-gradient(to right, transparent, var(--primary-pink), transparent);
+            margin: 3rem 0; /* Adjusted from 4rem */
+        }
+        /* ENHANCED: Icon styling */
+        .icon-enhanced {
+            background: linear-gradient(135deg, var(--primary-pink-light), var(--primary-pink-ultra-light));
+            border-radius: 20px; /* Adjusted from 24px */
+            padding: 0.75rem; /* Adjusted from 1rem */ /* Further reduced padding */
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0.75rem; /* Adjusted from 1rem */ /* Further reduced margin */
+            transition: all 0.3s ease;
+        }
+        .icon-enhanced:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+        .icon-enhanced i {
+            color: var(--primary-pink);
+            width: 1.5rem; /* Adjusted from 1.75rem */ /* Further reduced icon size */
+            height: 1.5rem; /* Adjusted from 1.75rem */ /* Further reduced icon size */
+        }
+        /* ENHANCED: Floating CTA */
+        .floating-cta {
+            position: fixed;
+            bottom: 1.5rem; /* Adjusted from 2rem */
+            right: 1.5rem; /* Adjusted from 2rem */
+            z-index: 1000;
+            padding: 1rem 1.5rem; /* Adjusted from 1.25rem 2rem */
+            border-radius: 50px;
+            font-weight: 700;
+            background: var(--accent-gradient);
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(233, 30, 99, 0.4); /* Adjusted from 12px 40px */
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem; /* Adjusted from 0.75rem */
+            animation: floating-bounce 3s ease-in-out infinite;
+        }
+        .floating-cta:hover {
+            transform: translateY(-5px) scale(1.05);
+            background: var(--accent-gradient-hover);
+            box-shadow: 0 15px 45px rgba(233, 30, 99, 0.5); /* Adjusted from 20px 60px */
+        }
+        @keyframes floating-bounce {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); } /* Adjusted from -10px */
+        }
+        /* Contact Form Enhanced Styling */
+        .contact-form {
+            background: white;
+            border-radius: 24px;
+            padding: 2.5rem; /* Adjusted from 3rem */
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1); /* Adjusted from 20px 60px */
+            border: 1px solid #F1F5F9;
+        }
+        .contact-form .form-group {
+            margin-bottom: 1rem; /* Adjusted from 1.5rem */
+        }
+        .contact-form label {
+            display: block;
+            color: var(--neutral-dark);
+            font-weight: 600;
+            margin-bottom: 0.5rem; /* Adjusted from 0.75rem */
+            font-size: 0.9rem; /* Adjusted from 1rem */
+        }
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.8rem 1rem; /* Adjusted from 1rem 1.25rem */
+            border: 2px solid #E2E8F0;
+            border-radius: 10px; /* Adjusted from 12px */
+            font-size: 0.9rem; /* Adjusted from 1rem */
+            color: var(--neutral-dark);
+            background-color: white;
+            transition: all 0.3s ease;
+        }
+        .contact-form input[type="text"]:focus,
+        .contact-form input[type="email"]:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--primary-pink);
+            box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.2); /* Adjusted from 4px */
+            transform: translateY(-1px); /* Adjusted from -2px */
+        }
+        .contact-form textarea {
+            min-height: 100px; /* Adjusted from 140px */
+            resize: vertical;
+        }
+        /* Success message styling */
+        .success-message {
+            background: linear-gradient(135deg, #4CAF50, #45A049);
+            color: white;
+            padding: 0.8rem; /* Adjusted from 1rem */
+            border-radius: 10px; /* Adjusted from 12px */
+            text-align: center;
+            font-weight: 600;
+            display: none;
+        }
+        /* Infinite Carousel specific styles */
+        #testimonial-carousel-wrapper {
+            position: relative;
+            overflow: hidden; /* Hide scrollbars */
+            width: 100%;
+            padding: 0.5rem 0; /* Adjusted from 1rem */
+        }
+        #testimonial-carousel-track {
+            display: flex;
+            gap: 0.75rem; /* Adjusted from 1rem (gap-3 instead of gap-4) */
+            animation: scroll-x linear infinite var(--animation-duration);
+            /* Add this to enable GPU acceleration for smoother animation */
+            will-change: transform;
+        }
+        #testimonial-carousel-track:hover {
+            animation-play-state: paused;
+        }
+        @keyframes scroll-x {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+    </style>
+</head>
+<body>
+    <!-- ENHANCED: Header with improved styling and urgency -->
+    <header class="bg-white/95 backdrop-blur-lg sticky top-0 z-50 border-b border-gray-100">
+        <!-- Social Proof Banner -->
+        <div class="social-proof-banner text-sm">
+            <div class="flex items-center justify-center gap-2">
+                <i data-lucide="check-circle" class="h-4 w-4"></i>
+                <span>✨ Trusted by Home Stagers & Interior Designers | 98% Client Satisfaction Rate </span>
+                <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+            </div>
+        </div>
+
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold flex flex-col sm:flex-row items-start sm:items-baseline"> <!-- Adjusted to items-start for left alignment on mobile -->
+                        <span style="color: var(--primary-pink);" class="text-2xl sm:text-2xl md:text-2xl lg:text-2xl">Bea Villanea</span> <!-- Explicit text-2xl for consistency -->
+                        <!-- Adjusted responsive text sizing for tagline and removed sm:ml-2 to prevent extra space on stacked mobile view -->
+                        <span class="text-gray-700 text-xs sm:text-sm md:text-base lg:text-lg leading-tight sm:leading-normal">Your Virtual Partner for Home Stagers & Interior Designers</span>
+                    </a>
+                </div>
+
+                <div class="hidden md:flex"> <!-- Explicitly hidden on small screens, flex on md and up -->
+                    <div class="ml-10 flex items-baseline space-x-6">
+                        <a href="#services" class="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors">How I Help</a>
+                        <a href="#about" class="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors">About Bea</a>
+                        <a href="#results" class="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors">Results</a>
+                        <a href="#testimonials" class="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors">Success Stories</a>
+                        <a href="#contact" class="btn-primary text-sm px-6 py-2">Let's Talk</a>
+                    </div>
+                </div>
+
+                <div class="md:hidden"> <!-- Always visible on small screens, hidden on md and up -->
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-gray-900 p-2 rounded-md focus:outline-none cursor-pointer">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <div class="space-y-2">
+                    <a href="#services" class="block text-gray-600 hover:text-gray-900 px-3 py-2 text-base font-medium">How I Help</a>
+                    <a href="#about" class="block text-gray-600 hover:text-gray-900 px-3 py-2 text-base font-medium">About Bea</a>
+                    <a href="#results" class="block text-gray-600 hover:text-gray-900 px-3 py-2 text-base font-medium">Results</a>
+                    <a href="#testimonials" class="block text-gray-600 hover:text-gray-900 px-3 py-2 text-base font-medium">Success Stories</a>
+                    <a href="#contact" class="btn-primary text-sm px-6 py-2">Let's Talk</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ENHANCED: Hero Section with dramatic impact and stronger value proposition for Home Stagers/Interior Designers -->
+        <section class="hero-enhanced">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- Text Content -->
+                    <div class="animate-fade-up relative z-10">
+                        <div class="inline-flex items-center bg-white/70 backdrop-blur-sm rounded-full px-4 py-2 mb-6 border border-pink-200">
+                            <span class="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
+                            <span class="text-sm font-medium text-gray-700">🎨 Ready to Elevate Your Design Business!</span>
+                        </div>
+                        <h1 class="mb-6 font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center lg:text-left">
+                            Focus on <span style="color: var(--primary-pink);">Design.</span><br>Leave the Rest to Me.
+                        </h1>
+                        <p class="text-xl text-gray-600 mb-8 leading-relaxed font-medium text-center lg:text-left">
+                            As your dedicated virtual partner, I free busy home stagers and interior designers from time-consuming admin, project management, and marketing tasks. I streamline your processes, manage client communication, and enhance your online presence, allowing you to reclaim critical time, take on more projects, and <strong class="text-pink-600">boost your design project efficiency by 40-60%</strong>.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 mb-8 justify-center lg:justify-start">
+                            <a href="#contact" class="btn-primary btn-urgent">
+                                <i data-lucide="palette" class="mr-2 h-5 w-5"></i>
+                                Design Your Success - It's FREE!
+                            </a>
+                            <a href="#results" class="btn-secondary relative z-20">
+                                <i data-lucide="trending-up" class="mr-2 h-4 w-4"></i>
+                                See My Impact
+                            </a>
+                        </div>
+                        <!-- Enhanced credibility indicators - Adjusted for better mobile responsiveness -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-sm">
+                            <div class="flex items-center justify-center lg:justify-start">
+                                <i data-lucide="check-circle" class="h-4 w-4 mr-2 text-green-500"></i>
+                                <span class="text-gray-600">13+ Years Support Experience</span>
+                            </div>
+                            <div class="flex items-center justify-center lg:justify-start">
+                                <i data-lucide="check-circle" class="h-4 w-4 mr-2 text-green-500"></i>
+                                <span class="text-gray-600">Meta & Google Certified</span>
+                            </div>
+                            <div class="flex items-center justify-center lg:justify-start">
+                                <i data-lucide="check-circle" class="h-4 w-4 mr-2 text-green-500"></i>
+                                <span class="text-gray-600">Design Operations Partner</span>
+                            </div>
+                        </div>
+                        <!-- NEW: Logos for Google, Meta, and Microsoft - Adjusted for better mobile responsiveness -->
+                        <div class="flex flex-wrap justify-center sm:justify-start gap-4 sm:gap-6 mt-6">
+                            <img src="https://ik.imagekit.io/ewoioxq0g/google-icon-logo-symbol-free-png.jpeg?updatedAt=1750363837747" alt="Google Logo" class="h-8 w-8 rounded-full shadow-md">
+                            <img src="https://ik.imagekit.io/ewoioxq0g/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjEwOTEtMDNfMS5wbmc.jpeg?updatedAt=1750363817942" alt="Meta Logo" class="h-8 w-8 rounded-full shadow-md">
+                            <img src="https://ik.imagekit.io/ewoioxq0g/microsoft-icon-logo-symbol-free-png.jpeg?updatedAt=1750363800770" alt="Microsoft Logo" class="h-8 w-8 rounded-full shadow-md">
+                        </div>
+                    </div>
+
+                    <!-- Enhanced Image Section -->
+                    <div class="animate-scale-in relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-pink-200 to-purple-200 rounded-3xl transform rotate-3 opacity-60"></div>
+                        <div class="absolute inset-0 bg-gradient-to-tl from-blue-100 to-pink-100 rounded-3xl transform -rotate-2 opacity-40"></div>
+                        <img
+                            src="https://ik.imagekit.io/ewoioxq0g/WhatsApp%20Image%202025-06-14%20at%2003.36.20_93175f5f.jpg?updatedAt=1749886904306"
+                            alt="Bea Villanea - Virtual Partner for Home Stagers and Interior Designers"
+                            class="relative rounded-3xl shadow-2xl w-full h-auto object-cover"
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x400/E91E63/ffffff?text=Bea+Villanea';"
+                        >
+                        <!-- Floating testimonial preview -->
+                        <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-xl border border-gray-100 max-w-xs">
+                            <div class="flex items-center space-x-2 mb-2">
+                                <div class="flex">
+                                    <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                    <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                    <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                    <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                    <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-600 italic">"Bea helped me manage clients and projects so I could focus on my designs. Game-changer for my staging business!"</p>
+                            <p class="text-xs text-gray-500 mt-1">- Sarah D., Home Stager & Designer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW: Results Section - High Impact -->
+        <section id="results" class="section-enhanced bg-gradient-to-br from-gray-50 to-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">Real Wins for Busy Home Stagers & Interior Designers</h2>
+                    <p class="section-subtitle">
+                        Design professionals partnering with me achieve rapid, measurable results. Often, all within 30 days.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-4 gap-4 justify-items-center">
+                    <div class="result-stat animate-fade-up">
+                        <span class="result-number" data-final-value="20+">0</span>
+                        <span class="result-label">Hours Saved Weekly</span>
+                    </div>
+                    <div class="result-stat animate-fade-up">
+                        <span class="result-number" data-final-value="45%">0</span>
+                        <span class="result-label">Project Efficiency Boost</span>
+                    </div>
+                    <div class="result-stat animate-fade-up">
+                        <span class="result-number" data-final-value="98%">0</span>
+                        <span class="result-label">Client Delight Score</span>
+                    </div>
+                    <div class="result-stat animate-fade-up">
+                        <span class="result-number" data-final-value="30">0</span>
+                        <span class="result-label">Day Business Transformation</span>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <a href="#testimonials" class="btn-secondary">
+                        <i data-lucide="arrow-right" class="mr-2 h-4 w-4"></i>
+                        Hear Their Success Stories
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ENHANCED: Scrolling Banner with stronger messaging -->
+        <div class="scrolling-banner">
+            <div class="banner-content">
+                <span class="banner-text">⚡ DESIGN MORE, ADMIN LESS</span>
+                <span class="banner-text">🚀 SUPERCHARGE YOUR PROJECT FLOW</span>
+                <span class="banner-text">✨ AMPLIFY YOUR DESIGN PORTFOLIO</span>
+                <span class="banner-text">📈 ATTRACT MORE HIGH-VALUE CLIENTS</span>
+                <span class="banner-text">💎 TOP-NOTCH SUPPORT FOR CREATIVES</span>
+                <span class="banner-text">🎯 DESIGN BUSINESS MAKEOVER IN 30 DAYS</span>
+                <span class="banner-text">⚡ DESIGN MORE, ADMIN LESS</span>
+                <span class="banner-text">🚀 SUPERCHARGE YOUR PROJECT FLOW</span>
+                <span class="banner-text">✨ AMPLIFY YOUR DESIGN PORTFOLIO</span>
+                <span class="banner-text">📈 ATTRACT MORE HIGH-VALUE CLIENTS</span>
+            </div>
+        </div>
+
+        <!-- ENHANCED: Problem Section with stronger emotional impact -->
+        <section id="problem" class="section-enhanced bg-gray-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">You need to Delegate <br>Here are reasons why you have to</h2>
+                    <p class="section-subtitle">
+                        You didn't become a design pro to spend 70% of your time on admin, project coordination, and endless client emails. Let's fix that.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-4"> <!-- Adjusted gap from 6 to 4 -->
+                    <div class="card-enhanced animate-fade-up" style="padding: 1.25rem;"> <!-- Adjusted padding from 1.5rem to 1.25rem -->
+                        <div class="icon-enhanced" style="padding: 0.4rem; margin-bottom: 0.4rem;"> <!-- Adjusted padding and margin-bottom -->
+                            <i data-lucide="clock" class="h-5 w-5"></i> <!-- Adjusted icon size from h-6 w-6 to h-5 w-5 -->
+                        </div>
+                        <h3 class="text-base font-bold mb-2 text-red-600">The Admin Overload</h3> <!-- Adjusted font size from lg to base, mb-3 to mb-2 -->
+                        <p class="text-xs text-gray-600 mb-2"> <!-- Adjusted font size from sm to xs, mb-3 to mb-2 -->
+                            You're losing <strong>20+ hours weekly</strong> to paperwork, scheduling, and repetitive tasks, stealing time from your creative design work.
+                        </p>
+                        <div class="text-xs text-red-500 font-semibold">
+                            💰 Cost: Fewer projects, less creativity
+                        </div>
+                    </div>
+                    <div class="card-enhanced animate-fade-up" style="padding: 1.25rem;">
+                        <div class="icon-enhanced" style="padding: 0.4rem; margin-bottom: 0.4rem;">
+                            <i data-lucide="trending-down" class="h-5 w-5"></i>
+                        </div>
+                        <h3 class="text-base font-bold mb-2 text-red-600">Lost Design & Client Time</h3>
+                        <p class="text-xs text-gray-600 mb-2">
+                            Every hour on non-design tasks is an hour diverted from <strong>client consultations</strong>, design execution, or strategic business growth.
+                        </p>
+                        <div class="text-xs text-red-500 font-semibold">
+                            📉 Result: Missed project opportunities & revenue
+                        </div>
+                    </div>
+                    <div class="card-enhanced animate-fade-up" style="padding: 1.25rem;">
+                        <div class="icon-enhanced" style="padding: 0.4rem; margin-bottom: 0.4rem;">
+                            <i data-lucide="battery-low" class="h-5 w-5"></i>
+                        </div>
+                        <h3 class="text-base font-bold mb-2 text-red-600">Creative Burnout Risk</h3>
+                        <p class="text-xs text-gray-600 mb-2">
+                            Constant task-switching between creative design and administrative duties is <strong>mentally exhausting</strong> and drains your passion.
+                        </p>
+                        <div class="text-xs text-red-500 font-semibold">
+                            🔥 Warning: Design passion becoming a burden
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <a href="#contact" class="btn-primary btn-urgent">
+                        <i data-lucide="arrow-right" class="mr-2 h-5 w-5"></i>
+                        Solve Your Business Challenges - Book Your Free Call
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ENHANCED: Services Section with better value proposition for Home Stagers/Interior Designers -->
+        <section id="services" class="section-enhanced">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">Smart & Strategic Support tailored for Busy Design Professionals</h2>
+                    <p class="section-subtitle">
+                        Imagine your design business running flawlessly, freeing you to focus on client consultations, creative execution, and attracting your dream projects. I'll help you achieve and smash your goals!
+                    </p>
+                </div>
+
+                <!-- Category 1: Design Project Management -->
+                <div class="bg-white rounded-3xl p-6 shadow-xl border border-pink-100 mb-12 animate-fade-up">
+                    <h3 class="text-2xl font-bold mb-3 text-center text-gray-800">Design Project Management</h3>
+                    <p class="text-base text-gray-600 mb-6 text-center font-medium">Streamlining Your Creative Workflow for Efficiency</p>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="card-enhanced animate-fade-up" style="padding: 1.25rem;">
+                            <div class="icon-enhanced"><h3 class="text-base font-bold mb-2">Client Communication & Follow-Up</h3>
+                                <i data-lucide="messages-square" class="h-5 w-5"></i>
+                            </div>
+                            <p class="text-xs text-gray-600 mb-3">Manage all client communications, ensuring timely updates and follow-ups so you can focus on design.</p>
+                            <div class="text-xs text-pink-600 font-semibold">✨ Keep clients delighted & informed.</div>
+                        </div>
+                        <div class="card-enhanced animate-fade-up" style="padding: 1.25rem;">
+                            <div class="icon-enhanced"><h3 class="text-base font-bold mb-2">Project Scheduling & Coordination</h3>
+                                <i data-lucide="calendar-check" class="h-5 w-5"></i>
+                            </div>
+                            <p class="text-xs text-gray-600 mb-3">Expertly schedule staging/design projects, manage deadlines, and coordinate with vendors.</p>
+                            <div class="text-xs text-pink-600 font-semibold">⏰ Deliver projects on time, every time!</div>
+                        </div>
+                        <div class="card-enhanced animate-fade-up" style="padding: 1.25rem;">
+                            <div class="icon-enhanced"> <h3 class="text-base font-bold mb-2">Material Sourcing & Procurement Support</h3>
+                                <i data-lucide="box" class="h-5 w-5"></i>
+                            </div>
+                            <p class="text-xs text-gray-600 mb-3">Assist with researching, sourcing, and tracking design materials and inventory for your projects.</p>
+                            <div class="text-xs text-pink-600 font-semibold">💰 Optimize sourcing & project costs.</div>
+                        </div>
+                        <div class="card-enhanced animate-fade-up" style="padding: 1.25rem;">
+                            <div class="icon-enhanced">  <h3 class="text-base font-bold mb-2">Design Proposal & Contract Prep</h3>
+                                <i data-lucide="file-text" class="h-5 w-5"></i>
+                            </div>
+                            <p class="text-xs text-gray-600 mb-3">Prepare professional design proposals, contracts, and invoices for client approval.</p>
+                            <div class="text-xs text-pink-600 font-semibold">🎯 Close deals faster & look polished.</div>
+                        </div>
+                        <div class="card-enhanced animate-fade-up" style="padding: 1.25rem;">
+                            <div class="icon-enhanced"> <h3 class="text-base font-bold mb-2">Photo Shoot Coordination & Styling</h3>
+                                <i data-lucide="camera" class="h-5 w-5"></i>
+                            </div>
+                            <p class="text-xs text-gray-600 mb-3">Coordinate photo shoots for finished projects, including scheduling and basic styling guidance.</p>
+                            <div class="text-xs text-pink-600 font-semibold">📸 Showcase your best work.</div>
+                        </div>
+                        <div class="card-enhanced animate-fade-up" style="padding: 1.25rem;">
+                            <div class="icon-enhanced"><h3 class="text-base font-bold mb-2">Virtual Staging & Design Consults Support</h3>
+                                <i data-lucide="monitor" class="h-5 w-5"></i>
+                            </div>
+                            <p class="text-xs text-gray-600 mb-3">Assist with scheduling, setting up, and following up on virtual staging and design consultations.</p>
+                            <div class="text-xs text-pink-600 font-semibold">🎉 Expand your reach & services.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 2: Marketing & Brand Elevation -->
+                <div class="bg-white rounded-3xl p-6 shadow-xl border border-pink-100 mb-12 animate-fade-up">
+                    <h3 class="text-2xl font-bold mb-3 text-center text-gray-800">Marketing & Brand Elevation</h3>
+                    <p class="text-base text-gray-600 mb-6 text-center font-medium">Maximizing Your Design Business Visibility & Client Attraction</p>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="card-enhanced animate-fade-up" style="padding: 1.25rem;">
+                            <div class="icon-enhanced">  <h3 class="text-base font-bold mb-2">Stunning Portfolio & Case Study Creation</h3>
+                                <i data-lucide="image" class="h-5 w-5"></i>
+                            </div>
+                            <p class="text-xs text-gray-600 mb-3">Curate and organize your best project photos into compelling portfolios and client case studies.</p>
+                            <div class="text-xs text-pink-600 font-semibold">📈 Attract more high-value clients.</div>
+                        </div>
+                        <div class="card-enhanced animate-fade-up" style="padding: 1.25rem;">
+                            <div class="icon-enhanced"><h3 class="text-base font-bold mb-2">Social Media Management for Designers</h3>
+                                <i data-lucide="instagram" class="h-5 w-5"></i>
+                            </div>
+                            <p class="text-xs text-gray-600 mb-3">Manage your Instagram, Pinterest, and other platforms to showcase your designs and engage your audience.</p>
+                            <div class="text-xs text-pink-600 font-semibold">🌟 Build a vibrant online presence.</div>
+                        </div>
+                        <div class="card-enhanced animate-fade-up" style="padding: 1.25rem;">
+                            <div class="icon-enhanced">  <h3 class="text-base font-bold mb-2">Client Testimonial Collection & Promotion</h3>
+                                <i data-lucide="award" class="h-5 w-5"></i>
+                            </div>
+                            <p class="text-xs text-gray-600 mb-3">Proactively collect glowing testimonials and strategically feature them across your marketing channels.</p>
+                            <div class="text-xs text-pink-600 font-semibold">🎬 Leverage social proof for growth.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 3: Operations & Client Relations -->
+                <div class="bg-white rounded-3xl p-6 shadow-xl border border-pink-100 mb-12 animate-fade-up">
+                    <h3 class="text-2xl font-bold mb-3 text-center text-gray-800">Operations & Client Relations</h3>
+                    <p class="text-base text-gray-600 mb-6 text-center font-medium">From Lead to Lifelong Client: Seamless Operations</p>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="card-enhanced animate-fade-up" style="padding: 1.25rem;">
+                            <div class="icon-enhanced"><h3 class="text-base font-bold mb-2">Client Onboarding & Offboarding Flows</h3>
+                                <i data-lucide="users-round" class="h-5 w-5"></i>
+                            </div>
+                            <p class="text-xs text-gray-600 mb-3">Set up seamless onboarding for new clients and professional offboarding processes post-project completion.</p>
+                            <div class="text-xs text-pink-600 font-semibold">💡 Create an exceptional client experience.</div>
+                        </div>
+                        <!-- CRM Management Card -->
+                        <div class="card-enhanced animate-fade-up" style="padding: 1.25rem;">
+                            <div class="icon-enhanced"> <h3 class="text-base font-bold mb-2">CRM & Client Database Management</h3>
+                                <i data-lucide="contact" class="h-5 w-5"></i>
+                            </div>
+                            <p class="text-xs text-gray-600 mb-3">Maintain and update your Client Relationship Management (CRM) system and client databases.</p>
+                            <div class="text-xs text-pink-600 font-semibold">🎯 Never miss a lead or a follow-up.</div>
+                        </div>
+                        <!-- Invoicing & Expense Tracking Card -->
+                        <div class="card-enhanced animate-fade-up" style="padding: 1.25rem;">
+                            <div class="icon-enhanced"><h3 class="text-base font-bold mb-2">Invoicing & Expense Tracking</h3>
+                                <i data-lucide="receipt" class="h-5 w-5"></i>
+                            </div>
+                            <p class="text-xs text-gray-600 mb-3">Manage invoicing, payments, and track project expenses to ensure accurate financial records.</p>
+                            <div class="text-xs text-pink-600 font-semibold">💬 Keep your finances clear and organized.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <a href="#contact" class="btn-primary">
+                        <i data-lucide="palette" class="mr-2 h-5 w-5"></i>
+                        Let's Talk about your Design Business Needs!
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ENHANCED: About Section with stronger positioning for design professionals -->
+        <section id="about" class="section-enhanced bg-gray-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="animate-fade-up">
+                        <div class="inline-flex items-center bg-pink-100 rounded-full px-4 py-2 mb-6">
+                            <span class="text-sm font-semibold text-pink-700">👋 Meet Your Design Growth Partner</span>
+                        </div>
+                        <h2 class="section-title text-left">Why Savvy Home Stagers & Designers Choose Me</h2>
+                        <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                            I'm Bea Villanea. With over 13 years in executive support, marketing, operations, tech, and customer service, I deeply understand the unique demands of the design industry. I'm more than just a task-doer; I'm your dedicated partner, empowering you to scale your design business. Stay 100% focused on creating beautiful spaces, delighting clients, and expanding your portfolio.
+                        </p>
+
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-start justify-center md:justify-start">
+                                <div class="w-6 h-6 bg-pink-500 rounded-full mr-4 flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i data-lucide="check" class="h-3 w-3 text-white"></i>
+                                </div>
+                                <div>
+                                    <span class="font-semibold text-gray-800">13+ Years of professional experience:</span>
+                                    <span class="text-gray-700 ml-1">Proven track record with satisfied design professionals</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start justify-center md:justify-start">
+                                <div class="w-6 h-6 bg-pink-500 rounded-full mr-4 flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i data-lucide="check" class="h-3 w-3 text-white"></i>
+                                </div>
+                                <div>
+                                    <span class="font-semibold text-gray-800">Industry-Certified Professional:</span>
+                                    <span class="text-gray-700 ml-1">Google & Meta certified with expertise in creative operations & client management</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start justify-center md:justify-start">
+                                <div class="w-6 h-6 bg-pink-500 rounded-full mr-4 flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i data-lucide="check" class="h-3 w-3 text-white"></i>
+                                </div>
+                                <div>
+                                    <span class="font-semibold text-gray-800">Strategic Design Business Partner:</span>
+                                    <span class="text-gray-700 ml-1">I understand project workflows, client acquisition, and growth strategies unique to design</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start justify-center md:justify-start">
+                                <div class="w-6 h-6 bg-pink-500 rounded-full mr-4 flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i data-lucide="check" class="h-3 w-3 text-white"></i>
+                                </div>
+                                <div>
+                                    <span class="font-semibold text-gray-800">Dedicated & Resilient:</span>
+                                    <span class="text-gray-700 ml-1">Marathon runner mindset – I go the distance for your design success</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-2xl p-6 border border-pink-100 mb-8">
+                            <p class="text-gray-700 italic text-lg">
+                                "My mission is simple: Fast-tracking your design business growth with solid, sustainable results." - Bea
+                            </p>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="#contact" class="btn-primary">
+                                <i data-lucide="message-circle" class="mr-2 h-5 w-5"></i>
+                                Let's Chat About Your Design Vision
+                            </a>
+                            <a href="#testimonials" class="btn-secondary">
+                                <i data-lucide="star" class="mr-2 h-4 w-4"></i>
+                                Hear Their Success Stories
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="animate-scale-in">
+                        <div class="relative">
+                            <div class="absolute inset-0 bg-gradient-to-br from-pink-200 to-purple-200 rounded-3xl transform -rotate-3"></div>
+                            <div class="absolute inset-0 bg-gradient-to-tl from-blue-100 to-pink-100 rounded-3xl transform rotate-2 opacity-60"></div>
+                            <img
+                                src="https://ik.imagekit.io/ewoioxq0g/WhatsApp%20Image%202025-06-14%20at%2003.38.06_4e303549.jpg?updatedAt=1749886904077"
+                                alt="Bea Villanea - Strategic Operations Partner for Home Stagers and Interior Designers"
+                                class="relative rounded-3xl shadow-2xl w-full h-auto object-cover"
+                                onerror="this.onerror=null; this.src='https://placehold.co/600x400/E91E63/ffffff?text=Bea+Villanea';"
+                            >
+                            <!-- Floating achievement badges -->
+                            <div class="absolute -top-4 -right-4 bg-white rounded-2xl p-3 shadow-xl border border-gray-100">
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-pink-600">98%</div>
+                                    <div class="text-xs text-gray-600">Client Satisfaction</div>
+                                </div>
+                            </div>
+
+                            <div class="absolute -bottom-4 -left-4 bg-white rounded-2xl p-3 shadow-xl border border-gray-100">
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-pink-600">13+</div>
+                                    <div class="text-xs text-gray-600">Years Experience</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ENHANCED: 30-Day Transformation with better visual impact for design professionals -->
+        <section id="transformation" class="section-enhanced">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">Your 30-Day Plan: Strategic & Optimized Design Workflow</h2>
+                    <p class="section-subtitle">
+                        Home stagers and interior designers experience measurable improvements in daily operations <strong>within just 30 days</strong>. Gain immediate time and efficiency to fuel your creative work and client acquisition.
+                    </p>
+                </div>
+
+                <div class="relative max-w-5xl mx-auto">
+                    <!-- Enhanced timeline line -->
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-2 h-full bg-gradient-to-b from-pink-500 via-pink-400 to-pink-300 rounded-full shadow-lg"></div>
+
+                    <div class="space-y-12"> <!-- Adjusted from space-y-16 -->
+                        <!-- Phase 1 -->
+                        <div class="flex flex-col lg:flex-row items-center">
+                            <div class="w-full lg:w-1/2 lg:pr-8 text-right animate-fade-up"> <!-- Adjusted lg:pr-12 to lg:pr-8 -->
+                                <div class="card-enhanced mb-4 lg:mb-0" style="padding: 1.5rem;"> <!-- Adjusted padding for smaller card -->
+                                    <div class="mb-4"> <!-- Adjusted from mb-6 -->
+                                        <span class="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-pink-500 to-pink-600 text-white rounded-full text-lg font-bold shadow-lg">1</span> <!-- Adjusted w-16 h-16 to w-12 h-12, text-xl to text-lg -->
+                                        <h3 class="text-xl font-bold mt-3 mb-1">Phase 1: Rapid Design Support Setup (Days 1-7)</h3> <!-- Adjusted text-2xl to text-xl, mt-4 to mt-3, mb-2 to mb-1 -->
+                                        <p class="text-gray-600 text-sm leading-relaxed"> <!-- Adjusted text-lg to text-sm -->
+                                            Streamline initial client communication, set up project folders, and begin urgent scheduling tasks. Feel relief within 48 hours.
+                                        </p>
+                                        <div class="mt-3 text-xs"> <!-- Adjusted mt-4 to mt-3, text-sm to text-xs -->
+                                            <strong class="text-green-600">Result:</strong> <span class="text-gray-700">Gain 5-8 creative hours weekly.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative lg:mx-6"> <!-- Adjusted lg:mx-8 to lg:mx-6 -->
+                                <div class="w-7 h-7 bg-pink-500 rounded-full border-3 border-white shadow-xl flex items-center justify-center"> <!-- Adjusted w-8 h-8 to w-7 h-7, border-4 to border-3 -->
+                                    <i data-lucide="zap" class="h-3.5 w-3.5 text-white"></i> <!-- Adjusted h-4 w-4 to h-3.5 w-3.5 -->
+                                </div>
+                            </div>
+                            <div class="hidden lg:block w-full lg:w-1/2 lg:pl-8"> <!-- Adjusted lg:pl-12 to lg:pl-8 -->
+                                <!-- Empty space for alternating layout on desktop -->
+                            </div>
+                        </div>
+
+                        <!-- Phase 2 -->
+                        <div class="flex flex-col lg:flex-row items-center">
+                            <div class="hidden lg:block w-full lg:w-1/2 lg:pr-8"> <!-- Adjusted lg:pr-12 to lg:pr-8 -->
+                                <!-- Empty space for alternating layout on desktop -->
+                            </div>
+                            <div class="relative lg:mx-6"> <!-- Adjusted lg:mx-8 to lg:mx-6 -->
+                                <div class="w-7 h-7 bg-pink-500 rounded-full border-3 border-white shadow-xl flex items-center justify-center"> <!-- Adjusted w-8 h-8 to w-7 h-7, border-4 to border-3 -->
+                                    <i data-lucide="trending-up" class="h-3.5 w-3.5 text-white"></i> <!-- Adjusted h-4 w-4 to h-3.5 w-3.5 -->
+                                </div>
+                            </div>
+                            <div class="w-full lg:w-1/2 lg:pl-8 text-left animate-fade-up"> <!-- Adjusted lg:pl-12 to lg:pl-8 -->
+                                <div class="card-enhanced mt-4 lg:mt-0" style="padding: 1.5rem;"> <!-- Adjusted padding for smaller card -->
+                                    <div class="mb-4"> <!-- Adjusted from mb-6 -->
+                                        <span class="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-pink-500 to-pink-600 text-white rounded-full text-lg font-bold shadow-lg">2</span> <!-- Adjusted w-16 h-16 to w-12 h-12, text-xl to text-lg -->
+                                        <h3 class="text-xl font-bold mt-3 mb-1">Phase 2: Workflow Optimization & Marketing Boost (Days 8-25)</h3> <!-- Adjusted text-2xl to text-xl, mt-4 to mt-3, mb-2 to mb-1 -->
+                                        <p class="text-gray-600 text-sm leading-relaxed"> <!-- Adjusted text-lg to text-sm -->
+                                            Proactively manage client projects, update your portfolio, and enhance your social media presence. Achieve smoother workflows and accelerate client acquisition.
+                                        </p>
+                                        <div class="mt-3 text-xs"> <!-- Adjusted mt-4 to mt-3, text-sm to text-xs -->
+                                            <strong class="text-green-600">Result:</strong> <span class="text-gray-700">Save 15-20 hours weekly; projects run seamlessly.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Phase 3 -->
+                        <div class="flex flex-col lg:flex-row items-center">
+                            <div class="w-full lg:w-1/2 lg:pr-8 text-right animate-fade-up"> <!-- Adjusted lg:pr-12 to lg:pr-8 -->
+                                <div class="card-enhanced mb-4 lg:mb-0" style="padding: 1.5rem;"> <!-- Adjusted padding for smaller card -->
+                                    <div class="mb-4"> <!-- Adjusted from mb-6 -->
+                                        <span class="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-pink-500 to-pink-600 text-white rounded-full text-lg font-bold shadow-lg">3</span> <!-- Adjusted w-16 h-16 to w-12 h-12, text-xl to text-lg -->
+                                        <h3 class="text-xl font-bold mt-3 mb-1">Phase 3: Scaling Your Design Empire (Day 30+)</h3> <!-- Adjusted text-2xl to text-xl, mt-4 to mt-3, mb-2 to mb-1 -->
+                                        <p class="text-gray-600 text-sm leading-relaxed"> <!-- Adjusted text-lg to text-sm -->
+                                            Transform your design business into a finely tuned machine. Focus on taking on more high-value projects, expanding your services, and attracting your ideal clientele.
+                                        </p>
+                                        <div class="mt-3 text-xs"> <!-- Adjusted mt-4 to mt-3, text-sm to text-xs -->
+                                            <strong class="text-green-600">Result:</strong> <span class="text-gray-700">Reclaim 20+ creative hours; boost project efficiency by 40-60%.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative lg:mx-6"> <!-- Adjusted lg:mx-8 to lg:mx-6 -->
+                                <div class="w-7 h-7 bg-pink-500 rounded-full border-3 border-white shadow-xl flex items-center justify-center"> <!-- Adjusted w-8 h-8 to w-7 h-7, border-4 to border-3 -->
+                                    <i data-lucide="crown" class="h-3.5 w-3.5 text-white"></i> <!-- Adjusted h-4 w-4 to h-3.5 w-3.5 -->
+                                </div>
+                            </div>
+                            <div class="hidden lg:block w-full lg:w-1/2 lg:pl-8"> <!-- Adjusted lg:pl-12 to lg:pl-8 -->
+                                <!-- Empty space for alternating layout on desktop -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-16">
+                    <div class="bg-gradient-to-r from-pink-50 to-purple-50 rounded-3xl p-8 mb-8">
+                        <h3 class="text-2xl font-bold mb-4">Ready for a Design Business Makeover?</h3>
+                        <p class="text-gray-600 mb-6">Join savvy home stagers and interior designers who have transformed their operations and accelerated growth.</p>
+                        <a href="#contact" class="btn-primary btn-urgent">
+                            <i data-lucide="rocket" class="mr-2 h-5 w-5"></i>
+                            Let's Start Your Design Transformation
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ENHANCED: Testimonials Section with infinite scroll carousel -->
+        <section id="testimonials" class="section-enhanced bg-gray-50 overflow-hidden">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">Awesome Stories from Home Stagers & Interior Designers</h2>
+                    <p class="section-subtitle">
+                        Hear how design professionals optimized their operations, dramatically boosting client satisfaction and project flow.
+                    </p>
+                </div>
+
+                <div id="testimonial-carousel-wrapper" class="relative overflow-hidden w-full py-4">
+                    <div id="testimonial-carousel-track" class="flex gap-4"> <!-- Adjusted gap from 6 to 4 -->
+                        <!-- Testimonial Cards - These will be cloned by JavaScript for infinite scroll -->
+                        <div class="testimonial-card"> <!-- No inline style, use class -->
+                            <div class="star-rating flex mb-1"> <!-- Adjusted mb-2 to mb-1 -->
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i> <!-- Adjusted h-5 w-5 to h-4 w-4 -->
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-4 italic leading-relaxed"> <!-- Adjusted text-lg to text-sm, mb-6 to mb-4 -->
+                                "Bea is incredible! She manages all my project scheduling and client communications, freeing me up to focus purely on my staging designs. My business has never been smoother."
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://placehold.co/120x120/E91E63/ffffff?text=SD" alt="Sarah D." class="w-10 h-10 rounded-full object-cover mr-3" onerror="this.onerror=null; this.src='https://placehold.co/120x120/E91E63/ffffff?text=SD';"> <!-- Adjusted w-14 h-14 to w-10 h-10, mr-4 to mr-3 -->
+                                <cite>
+                                    <p class="font-semibold text-base">Sarah D.</p> <!-- Adjusted text-lg to text-base -->
+                                    <p class="text-xs text-gray-500">Home Stager & Designer</p> <!-- Adjusted text-sm to text-xs -->
+                                    <p class="text-xs text-pink-600 font-semibold">Gained 20+ Hrs Weekly</p>
+                                </cite>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="star-rating flex mb-1">
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-4 italic leading-relaxed">
+                                "Our interior design firm needed better project coordination. Bea stepped in and totally streamlined our workflow. We're now completing projects 45% faster!"
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://placehold.co/120x120/E91E63/ffffff?text=AL" alt="Andrew L." class="w-10 h-10 rounded-full object-cover mr-3" onerror="this.onerror=null; this.src='https://placehold.co/120x120/E91E63/ffffff?text=AL';">
+                                <div>
+                                    <p class="font-semibold text-base">Andrew L.</p>
+                                    <p class="text-xs text-gray-500">Interior Design Firm Owner</p>
+                                    <p class="text-xs text-pink-600 font-semibold">Project Efficiency Up by 45%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="star-rating flex mb-1">
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-4 italic leading-relaxed">
+                                "Bea helped me revamp my online portfolio and social media. I'm getting more inquiries for high-end staging projects now, and my calendar is full!"
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://placehold.co/120x120/E91E63/ffffff?text=MP" alt="Maria P." class="w-10 h-10 rounded-full object-cover mr-3" onerror="this.onerror=null; this.src='https://placehold.co/120x120/E91E63/ffffff?text=MP';">
+                                <div>
+                                    <p class="font-semibold text-base">Maria P.</p>
+                                    <p class="text-xs text-gray-500">Luxury Home Stager</p>
+                                    <p class="text-xs text-pink-600 font-semibold">Increased High-Value Leads</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- NEW TESTIMONIAL CARD: Project Based Work -->
+                        <div class="testimonial-card">
+                            <div class="star-rating flex mb-1">
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-4 italic leading-relaxed">
+                                "Bea's project management for our design installations is flawless. She keeps everything on track, from procurement to final walkthroughs. Absolutely essential!"
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://placehold.co/120x120/1a73e8/ffffff?text=CM" alt="Chloe M." class="w-10 h-10 rounded-full object-cover mr-3" onerror="this.onerror=null; this.src='https://placehold.co/120x120/1a73e8/ffffff?text=CM';">
+                                <div>
+                                    <p class="font-semibold text-base">Chloe M.</p>
+                                    <p class="text-xs text-gray-500">Boutique Interior Designer</p>
+                                    <p class="text-xs text-pink-600 font-semibold">Installations 15% Faster</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- NEW TESTIMONIAL CARD: Graphic Design & Thumbnail Creation -->
+                        <div class="testimonial-card">
+                            <div class="star-rating flex mb-1">
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-4 italic leading-relaxed">
+                                "Our social media portfolio visuals have never looked better! Bea's graphic design and image optimization for our completed staging projects truly stands out, increasing our engagement."
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://placehold.co/120x120/34a853/ffffff?text=JT" alt="Jessica T." class="w-10 h-10 rounded-full object-cover mr-3" onerror="this.onerror=null; this.src='https://placehold.co/120x120/34a853/ffffff?text=JT';">
+                                <div>
+                                    <p class="font-semibold text-base">Jessica T.</p>
+                                    <p class="text-xs text-gray-500">Real Estate Staging Specialist</p>
+                                    <p class="text-xs text-pink-600 font-semibold">Portfolio Engagement +20%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- NEW TESTIMONIAL CARD: Content Calendar -->
+                        <div class="testimonial-card">
+                            <div class="star-rating flex mb-1">
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-4 italic leading-relaxed">
+                                "Bea built us a content calendar for our design blog and social media that's pure gold! Its impact on our client inquiries is continuous. Her efficiency is top-notch."
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://placehold.co/120x120/8A2BE2/ffffff?text=KF" alt="Karen F." class="w-10 h-10 rounded-full object-cover mr-3" onerror="this.onerror=null; this.src='https://placehold.co/120x120/8A2BE2/ffffff?text=KF';">
+                                <div>
+                                    <p class="font-semibold text-base">Karen F.</p>
+                                    <p class="text-xs text-gray-500">Design Studio Marketing Lead</p>
+                                    <p class="text-xs text-pink-600 font-semibold">Content Workflow Revolutionized</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- NEW TESTIMONIAL CARD: Website Update -->
+                        <div class="testimonial-card">
+                            <div class="star-rating flex mb-1">
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-4 italic leading-relaxed">
+                                "Our design firm's website needed a refresh. Bea handled the entire update seamlessly, ensuring our portfolio was beautifully displayed. It looks professional and functions perfectly!"
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://placehold.co/120x120/4CAF50/ffffff?text=RT" alt="Robert T." class="w-10 h-10 rounded-full object-cover mr-3" onerror="this.onerror=null; this.src='https://placehold.co/120x120/4CAF50/ffffff?text=RT';">
+                                <div>
+                                    <p class="font-semibold text-base">Robert T.</p>
+                                    <p class="text-xs text-gray-500">Lead Interior Architect</p>
+                                    <p class="text-xs text-pink-600 font-semibold">Website Fully Optimized</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- NEW TESTIMONIAL CARD: Client Email Communications -->
+                        <div class="testimonial-card">
+                            <div class="star-rating flex mb-1">
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-4 italic leading-relaxed">
+                                "Bea manages all our client email communications and follow-ups. Our clients feel more attended to, and I've gained back hours each week for actual design work!"
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://placehold.co/120x120/FF5722/ffffff?text=GS" alt="Grace S." class="w-10 h-10 rounded-full object-cover mr-3" onerror="this.onerror=null; this.src='https://placehold.co/120x120/FF5722/ffffff?text=GS';">
+                                <div>
+                                    <p class="font-semibold text-base">Grace S.</p>
+                                    <p class="text-xs text-gray-500">Principal Designer</p>
+                                    <p class="text-xs text-pink-600 font-semibold">Client Satisfaction Skyrocketed</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Enhanced CTA -->
+                <div class="text-center bg-white rounded-3xl p-8 shadow-xl border border-pink-100 mt-12">
+                    <h3 class="text-2xl font-bold mb-4">Ready to Add Your Success Story?</h3>
+                    <p class="text-gray-600 mb-6">Your design business transformation story could be next. Let's chat about making it happen.</p>
+                    <a href="#contact" class="btn-primary btn-urgent">
+                        <i data-lucide="calendar" class="mr-2 h-5 w-5"></i>
+                        Book Your Success Call
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ENHANCED: FAQ Section with better user experience for design professionals -->
+        <section id="faq" class="section-enhanced">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">Your Questions, Answered</h2>
+                    <p class="section-subtitle">
+                        Everything you need to know about partnering with a specialized Virtual Partner for your home staging and interior design business.
+                    </p>
+                </div>
+
+                <div class="max-w-4xl mx-auto space-y-6">
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="faq-item">
+                            <button class="faq-question w-full text-left p-4 flex justify-between items-center focus:outline-none group">
+                                <span class="font-semibold text-base group-hover:text-pink-600 transition-colors">How fast can you help my design business?</span>
+                                <i data-lucide="chevron-down" class="h-5 w-5 text-gray-500 transition-transform duration-200"></i>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-6">
+                                <p class="text-gray-600 leading-relaxed">
+                                    Expect impact in just 48 hours! I immediately handle high-priority tasks like key client communications and initial project setup. Complex workflow integrations typically take 3-5 days. Most design professionals feel significant relief in their first week, with a full operational transformation by day 30.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="faq-item">
+                            <button class="faq-question w-full text-left p-4 flex justify-between items-center focus:outline-none group">
+                                <span class="font-semibold text-base group-hover:text-pink-600 transition-colors">What makes your partnership unique for designers?</span>
+                                <i data-lucide="chevron-down" class="h-5 w-5 text-gray-500 transition-transform duration-200"></i>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-6">
+                                <p class="text-gray-600 leading-relaxed">
+                                    My approach is tailored for design professionals. I don't just execute tasks; I strategically optimize your design workflows, anticipate project needs, and enhance your client experience. With 13+ years in executive support and certifications from Google & Meta, I bring top-tier expertise and digital marketing acumen to accelerate your design business goals.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="faq-item">
+                            <button class="faq-question w-full text-left p-4 flex justify-between items-center focus:outline-none group">
+                                <span class="font-semibold text-base group-hover:text-pink-600 transition-colors">Can you use my current design software/tools?</span>
+                                <i data-lucide="chevron-down" class="h-5 w-5 text-gray-500 transition-transform duration-200"></i>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-6">
+                                <p class="text-gray-600 leading-relaxed">
+                                    Absolutely! I'm highly adaptable with diverse business software common in design, including project management (Asana, Trello, ClickUp), CRMs (HoneyBook, Dubsado, HubSpot), communication (Slack, Whatsapp), photo/asset management (Google Drive, Dropbox), and all office suites. I pride myself on quickly mastering any specialized design tools you utilize.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="faq-item">
+                            <button class="faq-question w-full text-left p-4 flex justify-between items-center focus:outline-none group">
+                                <span class="font-semibold text-base group-hover:text-pink-600 transition-colors">What kind of results can a home stager/designer really expect?</span>
+                                <i data-lucide="chevron-down" class="h-5 w-5 text-gray-500 transition-transform duration-200"></i>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-6">
+                                <p class="text-gray-600 leading-relaxed">
+                                    Based on client success, you can expect to:
+                                </p>
+                                <ul class="list-disc list-inside text-gray-600 space-y-2 mb-4">
+                                    <li>Reclaim 15-25 creative hours weekly for design work and client consultations.</li>
+                                    <li>Boost overall project efficiency and profitability by 40-60% through streamlined operations.</li>
+                                    <li>Increase client satisfaction and glowing testimonials with smoother project communications.</li>
+                                    <li>Reduce creative burnout and enjoy your passion for design again.</li>
+                                    <li>Scale your design business faster to take on more high-value projects.</li>
+                                </ul>
+                                <p class="text-gray-600">
+                                    These aren't just promises – they're what usually happens when I partner with top home stagers and interior designers.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="faq-item">
+                            <button class="faq-question w-full text-left p-4 flex justify-between items-center focus:outline-none group">
+                                <span class="font-semibold text-base group-hover:text-pink-600 transition-colors">How do we get started?</span>
+                                <i data-lucide="chevron-down" class="h-5 w-5 text-gray-500 transition-transform duration-200"></i>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-6">
+                                <p class="text-gray-600 leading-relaxed">
+                                    It's simple and risk-free:
+                                </p>
+                                <ol class="list-decimal list-inside text-gray-600 space-y-2 mb-6">
+                                    <li>Book a free 30-minute chat to discuss your design business challenges and growth goals.</li>
+                                    <li>Receive a custom plan tailored to your specific operational and strategic needs.</li>
+                                    <li>Experience immediate relief as I take over key tasks, freeing you for creative leadership.</li>
+                                </ol>
+                                <div class="bg-pink-50 rounded-xl p-4 border border-pink-200">
+                                    <p class="text-pink-800 font-semibold mb-2">Ready for a design business change?</p>
+                                    <a href="#contact" class="btn-primary inline-flex items-center">
+                                        <i data-lucide="calendar" class="mr-2 h-5 w-5"></i>
+                                        Schedule Your Free Chat Now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section-enhanced hero-enhanced">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2 class="section-title">Ready to Design More & Grow Your Business Faster?</h2>
+                        <p class="section-subtitle">
+                            Book your free 30-minute strategy call. Discover precisely how I can transform your administrative headaches into swift, seamless design project success in just 30 days. You'll gain freedom to lead with vision and expand your creative enterprise.
+                        </p>
+                        <div class="urgency-indicator mb-8">
+                            <i data-lucide="clock" class="h-4 w-4"></i>
+                            Don't miss out on this high-level support!
+                        </div>
+                    </div>
+
+                    <div class="grid lg:grid-cols-2 gap-12 items-start">
+                        <!-- Right side: Professional Card (moved to the right) -->
+                        <div class="animate-scale-in">
+                            <div class="card-enhanced text-center">
+                                <img
+                                    src="https://ik.imagekit.io/ewoioxq0g/Untitled%20design%20(4).png?updatedAt=1749778070801"
+                                    alt="Bea Villanea - Strategic Operations & Creative Partner for Home Stagers and Interior Designers"
+                                    class="w-40 h-40 rounded-full mx-auto mb-6 object-cover shadow-xl ring-4 ring-pink-100"
+                                >
+                                <h3 class="text-2xl font-bold mb-3">Let's Design Your Success, Together!</h3>
+                                <p class="text-gray-600 mb-6 leading-relaxed">
+                                    I'm eager to understand your unique design business challenges. Let's strategize how we can collaborate to achieve your ambitious growth goals. No pressure—just candid conversation and actionable strategies for a smarter, more profitable design studio.
+                                </p>
+
+                                <div class="bg-pink-50 rounded-xl p-4 mb-6 border border-pink-200">
+                                    <div class="grid grid-cols-2 gap-4 text-sm">
+                                        <div class="text-center">
+                                            <div class="text-2xl font-bold text-pink-600">98%</div>
+                                            <div class="text-xs text-gray-600">Client Satisfaction Rate</div>
+                                        </div>
+                                        <div class="text-center">
+                                            <div class="text-2xl font-bold text-pink-600">45%</div>
+                                            <div class="text-xs text-gray-600">Average Project Efficiency Increase</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-2 text-sm text-gray-500">
+                                    <p class="flex items-center justify-center">
+                                        <i data-lucide="mail" class="h-4 w-4 mr-2"></i>
+                                        villaneabe1@gmail.com
+                                    </p>
+                                    <p class="flex items-center justify-center">
+                                        <i data-lucide="clock" class="h-4 w-4 mr-2"></i>
+                                        Available Mon-Fri, 8AM-6PM Your Time
+                                    </p>
+                                    <p class="flex items-center justify-center">
+                                        <i data-lucide="map-pin" class="h-4 w-4 mr-2"></i>
+                                        Based in the Philippines, Flexible Schedule
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Left side: Value Proposition & Contact Options -->
+                        <div class="animate-fade-up">
+                            <div class="bg-white rounded-3xl p-8 shadow-xl border border-pink-100 mb-8">
+                                <h3 class="text-2xl font-bold mb-6 text-center">What You'll Gain in Your Free Call:</h3>
+
+                                <div class="space-y-6">
+                                    <div class="flex items-start">
+                                        <div class="icon-enhanced mr-4 !mb-0">
+                                            <i data-lucide="search" class="h-5 w-5"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-semibold">Insightful Design Operations Review</p>
+                                            <p class="text-gray-600 text-sm">Pinpoint where daily admin hinders your creative flow and impacts project delivery.</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <div class="icon-enhanced mr-4 !mb-0">
+                                            <i data-lucide="target" class="h-5 w-5"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-semibold">Personalized Design Workflow Playbook</p>
+                                            <p class="text-gray-600 text-sm">A custom plan to reclaim 20+ design hours weekly. Focus on creative execution and client delight.</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <div class="icon-enhanced mr-4 !mb-0">
+                                            <i data-lucide="trending-up" class="h-5 w-5"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-semibold">Your Fast-Track Design Growth Plan</p>
+                                            <p class="text-gray-600 text-sm">A clear path to boost project productivity within 30 days and increase your capacity for more clients by 40-60% in 6-12 months. Optimize design processes and enhance your online presence!</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <div class="icon-enhanced mr-4 !mb-0">
+                                            <i data-lucide="gift" class="h-5 w-5"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-semibold">Bonus Gift</p>
+                                            <p class="text-gray-600 text-sm">Your free "How to Supercharge Your Design Business with Virtual Support" Ebook.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text-center space-y-4">
+                                <a href="https://calendly.com/villaneabea1/30min" target="_blank" class="btn-primary btn-urgent w-full justify-center text-lg py-4">
+                                    <i data-lucide="calendar" class="mr-3 h-6 w-6"></i>
+                                    Book Your FREE Strategy Call Now
+                                </a>
+
+                                <p class="text-sm text-gray-500">⚡ Typically books within 24-48 hours</p>
+
+                                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                                    <a href="mailto:villaneabea1@gmail.com" class="btn-secondary flex-1 justify-center">
+                                        <i data-lucide="mail" class="mr-2 h-4 w-4"></i>
+                                        Shoot an Email
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/bea-villanea-3a2a862a9" target="_blank" class="btn-secondary flex-1 justify-center">
+                                        <i data-lucide="linkedin" class="mr-2 h-4 w-4"></i>
+                                        Let's connect on LinkedIn
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Additional trust signals -->
+                    <div class="text-center mt-12 pt-8 border-t border-pink-200">
+                        <p class="text-gray-600 mb-4">
+                            <strong>🔒 Totally Confidential</strong> • <strong>📞 Zero Pressure</strong> • <strong>💝 Real Value, Guaranteed</strong>
+                        </p>
+                        <p class="text-sm text-gray-500 italic">
+                            "Every conversation starts with truly understanding what your design business needs. I'm here to help, not push." - Bea
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ENHANCED: Footer with better structure -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-white font-bold text-xl mb-4">Bea Villanea</h3>
+                    <p class="text-gray-400 mb-4 leading-relaxed">
+                        Your dedicated Virtual Partner for home stagers and interior designers. I streamline your design operations, providing bandwidth to focus on creative excellence, client delight, and expanding your portfolio. This frees you from daily tasks, allowing you to truly lead and grow your design empire.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/in/bea-villanea-3a2a862a9" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i data-lucide="linkedin" class="h-5 w-5"></i>
+                        </a>
+                        <a href="mailto:villaneabe1@gmail.com" class="text-gray-400 hover:text-white transition-colors">
+                            <i data-lucide="mail" class="h-5 w-5"></i>
+                        </a>
+                        <a href="https://calendly.com/villaneabea1/30min" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i data-lucide="calendar" class="h-5 w-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">What I Help With</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>Client Comms & Follow-up</li>
+                        <li>Project Scheduling & Coord.</li>
+                        <li>Material Sourcing Support</li>
+                        <li>Design Proposal Prep</li>
+                        <li>Portfolio & Case Studies</li>
+                        <li>Social Media Management</li>
+                        <li>Client Testimonial Collection</li>
+                        <li>CRM Management</li>
+                        <li>Invoicing & Expense Tracking</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Get Started</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>
+                            <a href="#contact" class="hover:text-white transition-colors">Free Consultation</a>
+                        </li>
+                        <li>
+                            <a href="mailto:villaneabe1@gmail.com" class="hover:text-white transition-colors">villaneabe1@gmail.com</a>
+                        </li>
+                        <li>Available Mon-Fri</li>
+                        <li>Flexible Time Zones</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Bea Villanea. All rights reserved. | Helping Home Stagers & Interior Designers Flourish!</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Enhanced Floating CTA Button -->
+    <a href="#contact" class="floating-cta">
+        <i data-lucide="calendar" class="h-5 w-5"></i>
+        Ready to Design More? Book a call!
+        <span class="text-xs bg-white/20 px-2 py-1 rounded-full">FREE</span>
+    </a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Lucide icons
+            lucide.createIcons();
+
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton && mobileMenu) { // Added null checks
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // Enhanced Intersection Observer for animations
+            const observerOptions = {
+                root: null,
+                rootMargin: '50px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all animated elements and check initial visibility
+            document.querySelectorAll('.animate-fade-up, .animate-scale-in').forEach(el => {
+                observer.observe(el);
+
+                // Check if element is already in view on page load
+                const rect = el.getBoundingClientRect();
+                const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+                if (rect.top >= 0 && rect.top <= windowHeight) {
+                    el.classList.add('in-view');
+                }
+            });
+
+            // Enhanced FAQ functionality
+            document.querySelectorAll('.faq-question').forEach(button => {
+                button.addEventListener('click', () => {
+                    const faqItem = button.closest('.faq-item');
+                    const answer = faqItem.querySelector('.faq-answer');
+                    const chevron = button.querySelector('i[data-lucide="chevron-down"]');
+
+                    const isOpen = answer && !answer.classList.contains('hidden'); // Ensure answer exists
+                    // Close all other FAQ items if they are open
+                    document.querySelectorAll('.faq-answer').forEach(otherAnswer => {
+                        if (otherAnswer && otherAnswer !== answer && !otherAnswer.classList.contains('hidden')) { // Ensure otherAnswer exists
+                            otherAnswer.classList.add('hidden');
+                            const otherChevron = otherAnswer.closest('.faq-item')?.querySelector('i[data-lucide="chevron-down"]'); // Use optional chaining
+                            if (otherChevron) {
+                                otherChevron.style.transform = 'rotate(0deg)';
+                            }
+                        }
+                    });
+
+                    // Toggle current item
+                    if (answer) { // Ensure answer exists
+                        if (isOpen) {
+                            answer.classList.add('hidden');
+                            if (chevron) {
+                                chevron.style.transform = 'rotate(0deg)';
+                            }
+                        } else {
+                            answer.classList.remove('hidden');
+                            if (chevron) {
+                                chevron.style.transform = 'rotate(180deg)';
+                            }
+                        }
+                    }
+                });
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Add scroll progress indicator
+            const progressBar = document.createElement('div');
+            progressBar.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 0%;
+                height: 3px;
+                background: linear-gradient(135deg, #E91E63, #FF6B9D);
+                z-index: 9999;
+                transition: width 0.25s ease;
+            `;
+            document.body.appendChild(progressBar);
+
+            window.addEventListener('scroll', () => {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                progressBar.style.width = scrolled + '%';
+            });
+
+            // Enhanced floating CTA behavior
+            const floatingCTA = document.querySelector('.floating-cta');
+            let lastScrollTop = 0;
+
+            window.addEventListener('scroll', () => {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (floatingCTA) { // Null check for floatingCTA
+                    if (scrollTop > lastScrollTop && scrollTop > 100) {
+                        // Scrolling down - hide CTA
+                        floatingCTA.style.transform = 'translateY(100px)';
+                        floatingCTA.style.opacity = '0';
+                    } else {
+                        // Scrolling up - show CTA
+                        floatingCTA.style.transform = 'translateY(0)';
+                        floatingCTA.style.opacity = '1';
+                    }
+                }
+                lastScrollTop = scrollTop;
+            });
+
+            // New: Scroll-activated number counter animation
+            const numberCounters = document.querySelectorAll('.result-number');
+            const animatedNumbers = new Set(); // To ensure animation runs only once per element
+            const animateNumber = (element) => {
+                if (animatedNumbers.has(element)) {
+                    return; // Already animated
+                }
+
+                const finalValue = element.getAttribute('data-final-value');
+                // Extract numeric part using regex
+                const numericMatch = finalValue.match(/(\d+(\.\d+)?)/);
+                const numericTarget = numericMatch ? parseFloat(numericMatch[1]) : 0;
+
+                let current = 0;
+                const duration = 1500; // milliseconds
+                const step = numericTarget / (duration / 16); // ~60 frames per second for smoothness
+
+                const timer = setInterval(() => {
+                    current += step;
+                    if (current >= numericTarget) {
+                        clearInterval(timer);
+                        element.textContent = finalValue; // Set to the original text with suffix
+                        animatedNumbers.add(element); // Mark as animated
+                    } else {
+                        // Display integer if original is integer, otherwise float (with 0 decimal places for simplicity)
+                        if (Number.isInteger(numericTarget)) {
+                            element.textContent = Math.floor(current);
+                        } else {
+                            element.textContent = current.toFixed(0); // Keeping it as integer for current count
+                        }
+                    }
+                }, 16); // Approximately 60 frames per second
+            };
+
+            const resultsSection = document.getElementById('results'); // Get the whole section
+            const sectionObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Find all number elements within this section
+                        const numbersInView = entry.target.querySelectorAll('.result-number');
+                        numbersInView.forEach(numElement => {
+                            animateNumber(numElement);
+                        });
+                        // Stop observing the section once its numbers are animated
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.2 // Trigger when 20% of the section is visible for better mobile activation
+            });
+
+            // Observe the entire results section
+            if (resultsSection) {
+                sectionObserver.observe(resultsSection);
+            }
+
+            // Infinite Testimonial Carousel functionality
+            const testimonialCarouselTrack = document.getElementById('testimonial-carousel-track');
+            // Select all direct children that are testimonial cards
+            let originalTestimonialCards = Array.from(testimonialCarouselTrack.querySelectorAll('.testimonial-card'));
+
+            if (testimonialCarouselTrack && originalTestimonialCards.length > 0) {
+                // Clone all original cards and append them once to create the seamless loop
+                originalTestimonialCards.forEach(card => {
+                    testimonialCarouselTrack.appendChild(card.cloneNode(true));
+                });
+
+                const calculateAndSetAnimation = () => {
+                    // Recalculate original cards if any changes occurred (though this isn't dynamic in this simple setup)
+                    // Ensure the width calculation is based on ONE full set of original cards
+                    let totalOriginalWidth = 0;
+                    const gap = parseFloat(window.getComputedStyle(testimonialCarouselTrack).gap);
+
+                    originalTestimonialCards.forEach(card => {
+                        totalOriginalWidth += card.offsetWidth + gap;
+                    });
+                    // Subtract the last gap as it's not between cards
+                    totalOriginalWidth -= gap;
+
+                    // Set CSS variables for animation
+                    testimonialCarouselTrack.style.setProperty('--scroll-distance', `-${totalOriginalWidth}px`);
+                    const animationSpeed = 0.50; /* Adjusted from 0.04 to 0.08 for even faster testimonials */ // pixels per millisecond (adjust for desired speed)
+                    const duration = totalOriginalWidth / animationSpeed; // milliseconds
+                    testimonialCarouselTrack.style.setProperty('--animation-duration', `${duration / 1000}s`); // Convert to seconds
+                    // Pause on hover
+                    testimonialCarouselTrack.addEventListener('mouseenter', () => {
+                        testimonialCarouselTrack.style.animationPlayState = 'paused';
+                    });
+                    testimonialCarouselTrack.addEventListener('mouseleave', () => {
+                        testimonialCarouselTrack.style.animationPlayState = 'running';
+                    });
+                };
+                // Initial setup for the infinite carousel
+                calculateAndSetAnimation();
+                // Recalculate and reset animation on window resize
+                window.addEventListener('resize', calculateAndSetAnimation);
+            }
+        });
+    </script>
+</body>
+</html>
